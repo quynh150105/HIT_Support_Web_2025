@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bai1</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: aqua;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 180px;
+      }
+      .header {
+        color: red;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      .message {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Congratulation</div>
+      <div class="message">
+        <p th:text="'Dear ' + ${name} + ', '"></p>
+        <p>Your email has been sent successfully.</p>
+        <p>Fell free to reach out if you have any question.</p>
+      </div>
+      <div class="footer">
+        <p>Best regards,</p>
+        <p>Your father</p>
+      </div>
+    </div>
+  </body>
 </html>
